@@ -23,6 +23,75 @@ function toggleDropdown(dropdownClass) {
         }
     });
 }
+function toggleDropdown(selector) {
+    // Get the targeted dropdown content
+    const dropdownContent = document.querySelector(selector);
+    
+    // Toggle the visibility of the clicked dropdown
+    dropdownContent.classList.toggle('show');
+    
+    // Close other dropdowns if open
+    document.querySelectorAll('.dropdown-content').forEach(dropdown => {
+        if (dropdown !== dropdownContent) {
+            dropdown.classList.remove('show');
+        }
+    });
+}
+
+
+function hideAllSections() {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        section.style.display = 'none';
+    });
+}
+
+
+function showVisionMission(event) {
+    event.preventDefault();
+    hideAllSections();  // Hide all sections
+    const visionMissionSection = document.getElementById('vision-mission');
+    visionMissionSection.style.display = 'block';  // Show the Vision & Mission section
+    visionMissionSection.scrollIntoView({ behavior: 'smooth' });
+
+    // Reset the browser history state
+    history.replaceState(null, null, ' ');
+}
+
+function showCoreValues(event) {
+    event.preventDefault();
+    hideAllSections();  // Hide all sections
+    const CoreValuesSection = document.getElementById('core-values');
+    CoreValuesSection.style.display = 'block';  // Show the Vision & Mission section
+    CoreValuesSection.scrollIntoView({ behavior: 'smooth' });
+
+    // Reset the browser history state
+    history.replaceState(null, null, ' ');
+}
+
+function showSealLogo(event) {
+    event.preventDefault();
+    hideAllSections();  // Hide all sections
+    const SealLogoSection = document.getElementById('seal-logo');
+    SealLogoSection.style.display = 'block';  // Show the Vision & Mission section
+    SealLogoSection.scrollIntoView({ behavior: 'smooth' });
+
+    // Reset the browser history state
+    history.replaceState(null, null, ' ');
+}
+
+function showCCS(event) {
+    event.preventDefault();
+    hideAllSections();  // Hide all sections
+    const ccs = document.getElementById('ccs');
+    ccs.style.display = 'block';  // Show the Vision & Mission section
+    ccs.scrollIntoView({ behavior: 'smooth' });
+
+    // Reset the browser history state
+    history.replaceState(null, null, ' ');
+}
+
+
 
 registerLink.addEventListener('click', ()=>{
     wrapper.classList.add('active');
@@ -50,11 +119,3 @@ dropdownToggle.addEventListener('click', (event) => {
 
 
 // Close the dropdown if the user clicks outside of it
-window.addEventListener('click', (event) => {
-    if (!event.target.matches('.dropdown-toggle')) {
-        const dropdowns = document.querySelectorAll('.dropdown-content');
-        dropdowns.forEach(dropdown => {
-            dropdown.classList.remove('show');
-        });
-    }
-});

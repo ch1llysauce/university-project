@@ -7,6 +7,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
 body {
     display: flex;
     justify-content: center;
@@ -19,6 +20,14 @@ body {
     background-position: center;
     color: white;
     padding: 20px;
+}
+
+section {
+    display: none;    
+}
+
+section.show {
+    display: block; 
 }
 
 header {
@@ -37,7 +46,7 @@ h1 {
     text-align: center;
     text-shadow: 2px 2px 2px #000000;
     text-decoration: none;
-    margin-top: 20px;
+    margin-top: 0px;
     margin-left: 400px;
     margin-right: 400px;
 }
@@ -55,6 +64,71 @@ p {
     margin: 20px;
     margin-left: 400px;
     margin-right: 400px;
+}
+
+#vision-mission, #ccs {
+    display: flex;
+    flex-direction: column;  /* Stack the heading and paragraph vertically */
+    justify-content: center; /* Center the content vertically */
+    align-items: center;     /* Center the content horizontally */
+    text-align: center;      /* Center the text */
+    padding: 20px;           /* Padding around the entire section */
+}
+
+/* Style for the headings inside the Vision & Mission section */
+#vision-mission h1, #ccs h1{
+    font-size: 2.5em;   /* Adjust font size of the headings */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #e4bf45;    /* Change the color of the headings */
+    text-shadow: 2px 2px 4px #000000; /* Optional: Add text shadow */
+    padding: 70px 0px;
+
+}
+
+#vision-mission p, #ccs p {
+    text-align: center;
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    font-size: large;
+    text-shadow: 2px 2px 2px #000000;
+    margin: 20px;
+    margin-left: 400px;
+    margin-right: 400px;/* Justify text for cleaner alignment */
+    padding: 70px 0px;
+
+    
+}
+
+#vision-mission h1, #vision-mission p, #ccs h1, #ccs p{
+    margin: 0px; /* Remove default margins */
+    padding: 15px 0; /* Remove extra padding */
+}
+
+
+#core-values h1 {
+    font-size: 2.5em;   /* Adjust font size of the headings */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #e4bf45;    /* Change the color of the headings */
+    text-shadow: 2px 2px 4px #000000; /* Optional: Add text shadow */
+    padding: 70px 0px;
+
+}
+
+.core-value {
+    font-size: 1.5em;         /* Adjust the font size for values */
+    margin-bottom: 15px;      /* Space below each core value */
+}
+
+/* Letter and value styles */
+.core-value .letter {
+    font-weight: bold;        /* Make the letter bold */
+    color: #e4bf45;           /* Highlight the letter */
+    text-shadow: 2px 2px 4px #000000; /* Optional: Add text shadow */
+}
+
+.core-value .value {
+    color: #ffffff;           /* Set color of the value text */
+    text-shadow: 2px 2px 4px #000000; /* Optional: Add text shadow */
 }
 
 center{
@@ -134,6 +208,27 @@ center{
 
 }
 
+#seal-logo {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Stack items vertically */
+    height: 100vh; /* Full viewport height (optional) */
+    background-color: #ffffff00; /* Optional background color */
+}
+
+.logo-seal{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    height: auto;
+}
+.navigation {
+    display: flex;
+    gap: 15px;
+}
+
 .navigation a{
     position: relative;
     font-size: 1.1em;
@@ -173,6 +268,9 @@ center{
     display: block;
 }
 
+.dropdown-toggle:hover + .dropdown-content {
+    display: block;
+}
 
 .navigation a::after{
     content: '';

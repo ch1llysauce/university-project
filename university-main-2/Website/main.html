@@ -20,23 +20,66 @@
                  alt="University Logo" class="logo-img">
             <h2 class="logo-text" href = "main.html">University of Aurum Technology</h2>
         </div>
+     
         <nav class ="navigation">
-            
                 <a href ="main.html">Home</a>
                 <div class="dropdown"></div>
-                <a href="#" class="dropdown-toggle" onclick= "toggleDropdown('.about')">About U.A.T</a>
+                <a href="javascript:void(0);" class="dropdown-toggle" onclick= "toggleDropdown('.about')">About U.A.T</a>
                 <div class="dropdown-content about">
-                    <a href="#">Vision & Mission</a>
-                    <a href="#">Core Values</a>
-                    <a href="#">About the U.A.T Seal and Logo</a>
+                    <a href="#vision-mission" onclick="showVisionMission(event)" >Vision & Mission</a>
+                    <a href="#core-values" onclick="showCoreValues(event)">Core Values</a>
+                    <a href="seal_logo.html" onclick="showSealLogo(event)">About the U.A.T Seal and Logo</a>
                     <a href="#">Administration</a>
+
                 </div>
+                <section id ="vision-mission" style="display: none;">
+                <h1>Vision</h1>
+                <p>To be a globally recognized university that inspires innovation, promotes leadership, and nurtures a community of compassionate and ethical individuals.</p>
+                <h1>Mission</h1>
+                <p>The University of Aurum Technology aims to provide a transformative educational experience that allows students to develop their knowledge, skills, intellectual competence, and character in a rapidly changing world.
+                </p>
+            </section>
+
+            <section id="core-values">
+                <h1>Core Values</h1>
+                <div class="core-value">
+                    <span class="letter">A</span> - <span class="value">Authenticity</span>
+                </div>
+                <div class="core-value">
+                    <span class="letter">U</span> - <span class="value">United</span>
+                </div>
+                <div class="core-value">
+                    <span class="letter">R</span> - <span class="value">Recognition</span>
+                </div>
+                <div class="core-value">
+                    <span class="letter">U</span> - <span class="value">Uniqueness</span>
+                </div>
+                <div class="core-value">
+                    <span class="letter">M</span> - <span class="value">Might</span>
+                </div>
+            </section>
+
+            
+                
+
                 <a href="javascript:void(0);" class="dropdown-toggle" onclick="toggleDropdown('.programs')">What We Offer</a>
+                <div class="dropdown"></div>
                 <div class="dropdown-content programs">
-                    <a href="#">College of Computer Studies</a>
+                    <a href="#ccs" onclick = "showCCS(event)">College of Computer Studies</a>
                     <a href="#">College of Engineering and Architecture</a>
                     <a href="#">College of Arts</a>
                 </div>
+                
+                <section id ="ccs" style="display: none;">
+                    <h1>Bachelor of Science in Computer Science</h1>
+                    <p>A four-year program that provides students with a comprehensive understanding of the theoretical foundations and applications of computing. The curriculum of UAT covers theories, algorithms, data structures, programming languages, software development, and computer systems.</p>
+                    <h1>Bachelor of Science in Information Technology</h1>
+                    <p>A four-year program that provides students with a comprehensive understanding of the concepts and applications of Information Technology. The curriculum of UAT covers programming, database management, software development, and network security, and it equips students with the ability to design, implement, and manage technological solutions in different organizational settings.</p>
+                    <h1>Bachelor of Science in Information System</h1>
+                    <p>A four-year program that provides students with a comprehensive understanding of the design, development, and management of information systems. Students will be able to analyze business needs, create innovative technology solutions, and manage information resources effectively. The curriculum of UAT covers database management, software development, system analysis, and project management.</p>
+                </section>
+
+
                 
             </select>
             <a href ="#">Be A U.A.T.ian</a>
@@ -46,8 +89,8 @@
     </header>
 		
 
-	<section>
-        <h1 style = "color: #ffffff; text-decoration: none;">History</h1>
+	<section style="display: block;">
+        <h1 style="color: #ffffff; text-decoration: none; align-self: start;">History</h1>
         <p>
             University of Aurum Technology: A Legacy of Innovation Since 1970
         </p>
@@ -60,7 +103,18 @@
         <p>
             Over the years, the university expanded its facilities, invested in state-of-the-art laboratories, and fostered partnerships with major corporations and research institutions. Today, UAT stands as a leader in technological education, research, and innovation.
         </p>
+
+        <h1 style = "padding: 10px;" >Innovation and Creativity</h1>
+        <p>Here at UAT, we push the boundaries of education and technology through the roof. UAT encourages students, faculty, and staff to think creatively and embrace cutting-edge solutions to solve the challenges of tomorrow.</p>
+
+        <h1 style = "padding: 10px;" >Excellence in Education</h1>
+        <p>UAT is committed to providing the highest standards of education. Our programs are designed to challenge and inspire students, ensuring they leave UAT as well-rounded professionals ready to excel in their fields.</p>
+
+        <h1 style = "padding: 10px;" >Integrity & Ethics</h1>
+        <p>UAT upholds the highest ethical standards in all our endeavors. Integrity, honesty, and responsibility guide our academic, professional, and personal conduct, ensuring a respectful and trustworthy community.</p>
+
     </section>
+       
 
     <script src="script.js"></script>
  </body>
